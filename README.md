@@ -151,9 +151,22 @@ void main() {
 ### S02-L22: More Dart Basics
 
 ```dart
+// class Person {
+//   String name = 'Max';
+//   int age = 30;
+// }
+
 class Person {
-  String name = 'Max';
-  int age = 30;
+  final String name;
+  final int age;
+  
+  Person(this.name, this.age);
+  
+  @override
+  String toString() {
+    return "Person(name: $name, age: $age)";
+  }
+  
 }
 
 double addNumbers(double num1, double num2) { 
@@ -162,13 +175,17 @@ double addNumbers(double num1, double num2) {
 }
 
 void main() {
-  var p1 = Person();
-  var p2 = Person();
-  p2.name = 'Manu';
-  print(p1.age);
-  print(p2.name);
-  double firstResult;
-  firstResult = addNumbers(1, 1);
+//   var p1 = Person();
+//   var p2 = Person();
+//   p2.name = 'Manu';
+//   print(p1.age);
+//   print(p2.name);
+  var p3 = Person('Dmitri', 21);
+  print(p3);
+  
+//   var firstResult;
+  double firstResult = addNumbers(1, 1);
+//   firstResult = addNumbers(1, 1);
   // ...
   print(firstResult + 1);
   print('Hello!');
