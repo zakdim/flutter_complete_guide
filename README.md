@@ -197,28 +197,31 @@ void main() {
 
 ```dart
 class Person {
-  String? name;
-  int age;
+  final String name;
+  final int age;
   
-  Person({this.name, this.age = 30});
+  // positional arguments
+  Person(this.name, this.age);
+    // named arguments
+//   Person({this.name = '', this.age = 30});
+
+  
+  @override
+  String toString() {
+    return "Person{name: $name, age: $age}";
+  }
 }
 
-double addNumbers(double num1, double num2) { 
-  // print(num1 + num2);
-  return num1 + num2;
-}
 
 void main() {
-  var p1 = Person(name: 'Max', age: 30);
-  var p2 = Person(age: 31, name: 'Manu');
-  p2.name = 'Manu';
-  print(p1.age);
-  print(p2.name);
-  double firstResult;
-  firstResult = addNumbers(1, 1);
-  // ...
-  print(firstResult + 1);
-  print('Hello!');
+  var p1 = Person('Max', 30);
+  var p2 = Person('Manu', 31);
+  print(p1);
+  print(p2);
+  
+//   var p3 = Person(name: 'Dmitri', age: 21);
+//   print(p3);
+  
 }
 ```
 
