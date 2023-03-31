@@ -7,8 +7,11 @@ void main() => runApp(MyApp());
 
 // ignore: must_be_immutable
 class MyApp extends StatelessWidget {
+  var questionIndex = 0;
+
   void answerQuestion() {
-    print('Answer chosen!');
+    questionIndex += 1;
+    print(questionIndex);
   }
 
   @override
@@ -24,7 +27,9 @@ class MyApp extends StatelessWidget {
         ),
         body: Column(
           children: [
-            Text('The question!'),
+            Text(
+              questions[questionIndex],
+            ),
             ElevatedButton(
               child: Text('Answer 1'),
               onPressed: answerQuestion,
