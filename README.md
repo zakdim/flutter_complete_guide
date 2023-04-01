@@ -229,36 +229,34 @@ void main() {
 
 ```dart
 class Person {
-  String? name;
-  int? age;
+  String name;
+  int age;
   
-  Person({this.name, this.age = 30});
-  
-  Person.veryOld(this.name) {
-    age = 60;
+  // named arguments
+  Person({this.name = '', this.age = 30});
+  // special constructor
+  Person.veryOld(this.name) : age = 60;
+ 
+  @override
+  String toString() {
+    return "Person{name: $name, age: $age}";
   }
 }
 
-double addNumbers(double num1, double num2) { 
-  // print(num1 + num2);
-  return num1 + num2;
-}
-
 void main() {
-  var p1 = Person(name: 'Max', age: 30);
+  var p1 = Person(name: 'Max');
   var p2 = Person(age: 31, name: 'Manu');
-  var p3 = Person.veryOld('Max');
-  print(p3.name);
-  print(p3.age);
-  p2.name = 'Manu';
-  print(p1.age);
-  print(p2.name);
-  double firstResult;
-  firstResult = addNumbers(1, 1);
-  // ...
-  print(firstResult + 1);
-  print('Hello!');
+  var p3 = Person.veryOld('Gandalf');
+  print(p1);
+  print(p2);
+  print(p3);
 }
+```
+* Output:
+```
+Person{name: Max, age: 30}
+Person{name: Manu, age: 31}
+Person{name: Gandalf, age: 60}
 ```
 
 ### S02-L49: [DART DEEP DIVE] More on "if" Statements
