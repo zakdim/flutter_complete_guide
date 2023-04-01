@@ -281,5 +281,16 @@ void main() {
 ### S02-L50: [DART DEEP DIVE] The "null" Value & Null Safety
 
 ```dart
+void main() {
+  String? userName;
+  
+  userName = null;
+  userName = 'Max';
+  
+  if (userName != null) {
+    // onl continue if it's not null
+    print(userName);
+  }
+}
 
 ```
