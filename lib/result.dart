@@ -30,7 +30,16 @@ class Result extends StatelessWidget {
             style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
             textAlign: TextAlign.center,
           ),
-          TextButton(
+          // TextButton(
+          //   // style: TextButton.styleFrom(foregroundColor: Colors.orange),
+          //   onPressed: resetHandler,
+          //   child: Text('Restart Quiz!'),
+          // ),
+          OutlinedButton(
+            // style: OutlinedButton.styleFrom(
+            //   foregroundColor: Colors.orange,
+            //   side: BorderSide(color: Colors.orange),
+            // ),
             onPressed: resetHandler,
             child: Text('Restart Quiz!'),
           )

@@ -294,3 +294,8 @@ void main() {
 }
 
 ```
+
+### S02-L56: "Old" Button Widgets vs "New" Button Widgets
+
+See [New Buttons and Button Themes](https://docs.flutter.dev/release/breaking-changes/buttons#:~:text=The%20FlatButton%20%2C%20RaisedButton%20and%20OutlineButton,TextButtonTheme%20%2C%20ElevatedButtonTheme%20%2C%20and%20OutlinedButtonTheme%20.)
+
