@@ -59,8 +59,9 @@ class _MyAppState extends State<MyApp> {
     _totalScore += score;
 
     setState(() {
-      _questionIndex += 1;
+      _questionIndex += 3;
     });
+    print(_questions[_questionIndex]);
     print(_questionIndex);
     if (_questionIndex < _questions.length) {
       print('We have more questions!');
